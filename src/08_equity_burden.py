@@ -205,6 +205,51 @@ def main() -> None:
     table1_out.to_csv(out_csv, index=False)
     print("saved:", out_csv)
 
+    # ---- 8C/8E: Derived comparisons (cluster-level) ----
+    # Taxi vs rideshare dominance ratios by cluster.
+    ratios = table1_out.copy()
+    ratios["rideshare_to_taxi_ratio"] = ratios["Trips/1k residents (rideshare)"] / ratios["Trips/1k residents (taxi)"]
+    ratio_out = TAB_DIR / "step8_taxi_vs_rideshare_access_ratio_by_cluster.csv"
+    ratios[["Cluster", "rideshare_to_taxi_ratio"]].to_csv(ratio_out, index=False)
+    print("saved:", ratio_out)
+
+    # Total cost burden via trip length: compare High poverty / transit deserts vs Affluent / low deprivation.
+    # (This is descriptive, not causal: it summarizes cluster-level averages.)
+    def _row(cluster: str) -> pd.Series:
+        r = table1_out.loc[table1_out["Cluster"] == cluster]
+        return r.iloc[0] if len(r) else pd.Series(dtype=float)
+
+    hp_row = _row("High poverty / transit deserts")
+    aff_row = _row("Affluent / low deprivation")
+    if not hp_row.empty and not aff_row.empty:
+        cost_gap_per_trip = float(hp_row["Mean total fare ($)"] - aff_row["Mean total fare ($)"])
+        dist_gap = float(hp_row["Mean distance (miles)"] - aff_row["Mean distance (miles)"])
+        # Annual trips per resident (Jan -> annualized).
+        hp_annual_trips_per_res = float((hp_row["Trips/1k residents (rideshare)"] / 1000.0) * 12.0)
+        aff_annual_trips_per_res = float((aff_row["Trips/1k residents (rideshare)"] / 1000.0) * 12.0)
+        annual_spend_hp = float(hp_annual_trips_per_res * hp_row["Mean total fare ($)"])
+        annual_spend_aff = float(aff_annual_trips_per_res * aff_row["Mean total fare ($)"])
+        annual_spend_gap = float(annual_spend_hp - annual_spend_aff)
+        burden_out = TAB_DIR / "step8_total_cost_burden_high_poverty_vs_affluent.csv"
+        pd.DataFrame(
+            [
+                {
+                    "high_poverty_mean_fare": float(hp_row["Mean total fare ($)"]),
+                    "affluent_mean_fare": float(aff_row["Mean total fare ($)"]),
+                    "cost_gap_per_trip_high_minus_affluent": cost_gap_per_trip,
+                    "high_poverty_mean_distance": float(hp_row["Mean distance (miles)"]),
+                    "affluent_mean_distance": float(aff_row["Mean distance (miles)"]),
+                    "distance_gap_miles_high_minus_affluent": dist_gap,
+                    "high_poverty_annual_trips_per_resident_est": hp_annual_trips_per_res,
+                    "affluent_annual_trips_per_resident_est": aff_annual_trips_per_res,
+                    "high_poverty_annual_spend_per_resident_est": annual_spend_hp,
+                    "affluent_annual_spend_per_resident_est": annual_spend_aff,
+                    "annual_spend_per_resident_gap_high_minus_affluent": annual_spend_gap,
+                }
+            ]
+        ).to_csv(burden_out, index=False)
+        print("saved:", burden_out)
+
     # ---- 8G: Figure — mean total fare per trip by cluster (rideshare vs taxi) ----
     try:
         _setup_matplotlib()
