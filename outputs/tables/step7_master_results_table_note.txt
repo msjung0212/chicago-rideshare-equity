@@ -1,0 +1,4 @@
+Notes:
+- Standard errors clustered at community area level (pickup_ca for pickup models; dropoff_ca for Model 4).
+- Significance stars: * p<0.05, ** p<0.01, *** p<0.001. No asterisk = p>0.05.
+- Model 3 uses hour + hour^2 (not full hour fixed effects) so the late_night main effect is identified.

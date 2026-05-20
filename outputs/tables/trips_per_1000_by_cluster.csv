@@ -1,0 +1,9 @@
+cluster_label,trip_type,trips_per_1000_residents
+Affluent / low deprivation,rideshare,2179.885935446256
+Affluent / low deprivation,taxi,103.41207110313421
+High poverty / transit deserts,rideshare,443.2373685316595
+High poverty / transit deserts,taxi,26.802622893536057
+Mixed / higher deprivation,rideshare,525.0563984809207
+Mixed / higher deprivation,taxi,15.423691015631599
+Mixed / lower deprivation,rideshare,237.1817370231441
+Mixed / lower deprivation,taxi,2.347614260652464

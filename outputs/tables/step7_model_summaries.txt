@@ -1,0 +1,320 @@
+MODEL 1 (RIDESHARE)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      log_fare_per_mile   R-squared:                       0.674
+Model:                            OLS   Adj. R-squared:                  0.674
+Method:                 Least Squares   F-statistic:                 2.206e+04
+Date:                Tue, 19 May 2026   Prob (F-statistic):          5.85e-139
+Time:                        17:52:15   Log-Likelihood:            -1.2758e+06
+No. Observations:             3660088   AIC:                         2.552e+06
+Df Residuals:                 3660054   BIC:                         2.552e+06
+Df Model:                          33                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.3956      0.278      5.026      0.000       0.851       1.940
+C(hour, Treatment(reference=12))[T.0]           0.2362      0.022     10.791      0.000       0.193       0.279
+C(hour, Treatment(reference=12))[T.1]           0.4102      0.023     17.971      0.000       0.365       0.455
+C(hour, Treatment(reference=12))[T.2]           0.4959      0.031     16.175      0.000       0.436       0.556
+C(hour, Treatment(reference=12))[T.3]           0.1872      0.029      6.489      0.000       0.131       0.244
+C(hour, Treatment(reference=12))[T.4]           0.1620      0.025      6.520      0.000       0.113       0.211
+C(hour, Treatment(reference=12))[T.5]           0.1695      0.029      5.888      0.000       0.113       0.226
+C(hour, Treatment(reference=12))[T.6]           0.1516      0.022      6.947      0.000       0.109       0.194
+C(hour, Treatment(reference=12))[T.7]           0.2103      0.020     10.344      0.000       0.170       0.250
+C(hour, Treatment(reference=12))[T.8]           0.1944      0.021      9.459      0.000       0.154       0.235
+C(hour, Treatment(reference=12))[T.9]           0.0390      0.008      4.897      0.000       0.023       0.055
+C(hour, Treatment(reference=12))[T.10]          0.0065      0.003      2.507      0.012       0.001       0.012
+C(hour, Treatment(reference=12))[T.11]          0.0059      0.004      1.580      0.114      -0.001       0.013
+C(hour, Treatment(reference=12))[T.13]         -0.0153      0.004     -3.520      0.000      -0.024      -0.007
+C(hour, Treatment(reference=12))[T.14]          0.0056      0.006      0.873      0.383      -0.007       0.018
+C(hour, Treatment(reference=12))[T.15]          0.0264      0.009      2.792      0.005       0.008       0.045
+C(hour, Treatment(reference=12))[T.16]          0.0361      0.014      2.576      0.010       0.009       0.064
+C(hour, Treatment(reference=12))[T.17]          0.0989      0.019      5.112      0.000       0.061       0.137
+C(hour, Treatment(reference=12))[T.18]          0.1079      0.009     12.648      0.000       0.091       0.125
+C(hour, Treatment(reference=12))[T.19]          0.0386      0.009      4.202      0.000       0.021       0.057
+C(hour, Treatment(reference=12))[T.20]         -0.0061      0.016     -0.373      0.709      -0.038       0.026
+C(hour, Treatment(reference=12))[T.21]          0.0450      0.020      2.210      0.027       0.005       0.085
+C(hour, Treatment(reference=12))[T.22]          0.1641      0.031      5.356      0.000       0.104       0.224
+C(hour, Treatment(reference=12))[T.23]          0.1784      0.027      6.494      0.000       0.125       0.232
+C(day_of_week, Treatment(reference=0))[T.1]    -0.0409      0.010     -4.234      0.000      -0.060      -0.022
+C(day_of_week, Treatment(reference=0))[T.2]    -0.0427      0.012     -3.686      0.000      -0.065      -0.020
+C(day_of_week, Treatment(reference=0))[T.3]    -0.0238      0.017     -1.435      0.151      -0.056       0.009
+C(day_of_week, Treatment(reference=0))[T.4]    -0.0294      0.010     -2.865      0.004      -0.049      -0.009
+C(day_of_week, Treatment(reference=0))[T.5]    -0.0536      0.009     -5.815      0.000      -0.072      -0.036
+C(day_of_week, Treatment(reference=0))[T.6]    -0.0586      0.011     -5.559      0.000      -0.079      -0.038
+pickup_transit_deprivation_score               -0.1952      0.166     -1.178      0.239      -0.520       0.130
+log_distance                                   -0.6880      0.024    -28.613      0.000      -0.735      -0.641
+log_duration                                    0.2955      0.026     11.166      0.000       0.244       0.347
+pickup_median_income_10k                       -0.0148      0.027     -0.541      0.589      -0.069       0.039
+==============================================================================
+Omnibus:                   352291.676   Durbin-Watson:                   1.604
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           494076.113
+Skew:                           0.774   Prob(JB):                         0.00
+Kurtosis:                       3.920   Cond. No.                         331.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)\n\nMODEL 2 (TAXI)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      log_fare_per_mile   R-squared:                       0.785
+Model:                            OLS   Adj. R-squared:                  0.785
+Method:                 Least Squares   F-statistic:                     2208.
+Date:                Tue, 19 May 2026   Prob (F-statistic):          5.39e-101
+Time:                        17:52:15   Log-Likelihood:                 37654.
+No. Observations:              160927   AIC:                        -7.524e+04
+Df Residuals:                  160893   BIC:                        -7.490e+04
+Df Model:                          33                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.9043      0.085     22.378      0.000       1.738       2.071
+C(hour, Treatment(reference=12))[T.0]           0.0712      0.013      5.491      0.000       0.046       0.097
+C(hour, Treatment(reference=12))[T.1]           0.0765      0.014      5.494      0.000       0.049       0.104
+C(hour, Treatment(reference=12))[T.2]           0.0819      0.019      4.379      0.000       0.045       0.118
+C(hour, Treatment(reference=12))[T.3]           0.1180      0.021      5.496      0.000       0.076       0.160
+C(hour, Treatment(reference=12))[T.4]           0.1557      0.023      6.630      0.000       0.110       0.202
+C(hour, Treatment(reference=12))[T.5]           0.1075      0.021      5.163      0.000       0.067       0.148
+C(hour, Treatment(reference=12))[T.6]           0.0388      0.023      1.719      0.086      -0.005       0.083
+C(hour, Treatment(reference=12))[T.7]           0.0122      0.019      0.643      0.521      -0.025       0.050
+C(hour, Treatment(reference=12))[T.8]           0.0149      0.019      0.793      0.428      -0.022       0.052
+C(hour, Treatment(reference=12))[T.9]          -0.0054      0.009     -0.622      0.534      -0.022       0.012
+C(hour, Treatment(reference=12))[T.10]         -0.0096      0.005     -1.816      0.069      -0.020       0.001
+C(hour, Treatment(reference=12))[T.11]         -0.0067      0.002     -3.570      0.000      -0.010      -0.003
+C(hour, Treatment(reference=12))[T.13]         -0.0070      0.003     -2.684      0.007      -0.012      -0.002
+C(hour, Treatment(reference=12))[T.14]         -0.0108      0.003     -3.597      0.000      -0.017      -0.005
+C(hour, Treatment(reference=12))[T.15]         -0.0090      0.003     -2.769      0.006      -0.015      -0.003
+C(hour, Treatment(reference=12))[T.16]         -0.0022      0.004     -0.508      0.611      -0.011       0.006
+C(hour, Treatment(reference=12))[T.17]          0.0264      0.006      4.414      0.000       0.015       0.038
+C(hour, Treatment(reference=12))[T.18]          0.0282      0.008      3.388      0.001       0.012       0.045
+C(hour, Treatment(reference=12))[T.19]          0.0102      0.005      1.964      0.050    2.04e-05       0.020
+C(hour, Treatment(reference=12))[T.20]          0.0049      0.003      1.892      0.058      -0.000       0.010
+C(hour, Treatment(reference=12))[T.21]          0.0249      0.004      6.786      0.000       0.018       0.032
+C(hour, Treatment(reference=12))[T.22]          0.0540      0.007      7.607      0.000       0.040       0.068
+C(hour, Treatment(reference=12))[T.23]          0.0625      0.006      9.805      0.000       0.050       0.075
+C(day_of_week, Treatment(reference=0))[T.1]     0.0042      0.001      3.302      0.001       0.002       0.007
+C(day_of_week, Treatment(reference=0))[T.2]     0.0002      0.002      0.124      0.901      -0.003       0.004
+C(day_of_week, Treatment(reference=0))[T.3]     0.0002      0.003      0.060      0.952      -0.005       0.005
+C(day_of_week, Treatment(reference=0))[T.4]     0.0020      0.003      0.677      0.498      -0.004       0.008
+C(day_of_week, Treatment(reference=0))[T.5]     0.0087      0.005      1.613      0.107      -0.002       0.019
+C(day_of_week, Treatment(reference=0))[T.6]     0.0161      0.003      5.161      0.000       0.010       0.022
+pickup_transit_deprivation_score               -0.0305      0.067     -0.454      0.649      -0.162       0.101
+log_distance                                   -0.5633      0.010    -55.876      0.000      -0.583      -0.544
+log_duration                                    0.1315      0.013     10.048      0.000       0.106       0.157
+pickup_median_income_10k                       -0.0190      0.010     -1.936      0.053      -0.038       0.000
+==============================================================================
+Omnibus:                   133702.754   Durbin-Watson:                   1.978
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          4764852.736
+Skew:                           3.841   Prob(JB):                         0.00
+Kurtosis:                      28.526   Cond. No.                         302.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)\n\nMODEL 3 (INTERACTION)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      log_fare_per_mile   R-squared:                       0.664
+Model:                            OLS   Adj. R-squared:                  0.664
+Method:                 Least Squares   F-statistic:                     2111.
+Date:                Tue, 19 May 2026   Prob (F-statistic):           2.44e-92
+Time:                        17:52:16   Log-Likelihood:            -1.3333e+06
+No. Observations:             3660088   AIC:                         2.667e+06
+Df Residuals:                 3660073   BIC:                         2.667e+06
+Df Model:                          14                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.4912      0.272      5.486      0.000       0.958       2.024
+C(day_of_week, Treatment(reference=0))[T.1]    -0.0444      0.009     -5.078      0.000      -0.062      -0.027
+C(day_of_week, Treatment(reference=0))[T.2]    -0.0469      0.011     -4.188      0.000      -0.069      -0.025
+C(day_of_week, Treatment(reference=0))[T.3]    -0.0285      0.016     -1.769      0.077      -0.060       0.003
+C(day_of_week, Treatment(reference=0))[T.4]    -0.0345      0.010     -3.449      0.001      -0.054      -0.015
+C(day_of_week, Treatment(reference=0))[T.5]    -0.0605      0.009     -6.658      0.000      -0.078      -0.043
+C(day_of_week, Treatment(reference=0))[T.6]    -0.0637      0.011     -5.590      0.000      -0.086      -0.041
+pickup_transit_deprivation_score               -0.1934      0.163     -1.187      0.235      -0.513       0.126
+late_night                                      0.1676      0.039      4.326      0.000       0.092       0.244
+deprivation_x_latenight                        -0.0162      0.035     -0.462      0.644      -0.085       0.052
+log_distance                                   -0.7041      0.023    -30.099      0.000      -0.750      -0.658
+log_duration                                    0.3170      0.026     12.020      0.000       0.265       0.369
+pickup_median_income_10k                       -0.0148      0.027     -0.542      0.588      -0.068       0.039
+hour                                           -0.0051      0.001     -4.192      0.000      -0.008      -0.003
+I(hour ** 2)                                    0.0003   4.26e-05      6.031      0.000       0.000       0.000
+==============================================================================
+Omnibus:                   404992.397   Durbin-Watson:                   1.560
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           589077.284
+Skew:                           0.846   Prob(JB):                         0.00
+Kurtosis:                       4.000   Cond. No.                     1.17e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+[2] The condition number is large, 1.17e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.\n\nMODEL 4 (DROPOFF)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      log_fare_per_mile   R-squared:                       0.673
+Model:                            OLS   Adj. R-squared:                  0.673
+Method:                 Least Squares   F-statistic:                 1.513e+04
+Date:                Tue, 19 May 2026   Prob (F-statistic):          9.75e-133
+Time:                        17:52:17   Log-Likelihood:            -1.2843e+06
+No. Observations:             3660088   AIC:                         2.569e+06
+Df Residuals:                 3660054   BIC:                         2.569e+06
+Df Model:                          33                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.6117      0.268      6.008      0.000       1.086       2.137
+C(hour, Treatment(reference=12))[T.0]           0.2418      0.016     14.919      0.000       0.210       0.274
+C(hour, Treatment(reference=12))[T.1]           0.4152      0.018     23.432      0.000       0.380       0.450
+C(hour, Treatment(reference=12))[T.2]           0.5004      0.021     23.433      0.000       0.459       0.542
+C(hour, Treatment(reference=12))[T.3]           0.1923      0.017     11.519      0.000       0.160       0.225
+C(hour, Treatment(reference=12))[T.4]           0.1606      0.008     21.244      0.000       0.146       0.175
+C(hour, Treatment(reference=12))[T.5]           0.1577      0.015     10.754      0.000       0.129       0.186
+C(hour, Treatment(reference=12))[T.6]           0.1433      0.012     12.306      0.000       0.120       0.166
+C(hour, Treatment(reference=12))[T.7]           0.2019      0.013     15.700      0.000       0.177       0.227
+C(hour, Treatment(reference=12))[T.8]           0.1849      0.012     15.752      0.000       0.162       0.208
+C(hour, Treatment(reference=12))[T.9]           0.0322      0.008      4.070      0.000       0.017       0.048
+C(hour, Treatment(reference=12))[T.10]          0.0032      0.004      0.876      0.381      -0.004       0.010
+C(hour, Treatment(reference=12))[T.11]          0.0051      0.003      1.768      0.077      -0.001       0.011
+C(hour, Treatment(reference=12))[T.13]         -0.0168      0.003     -5.348      0.000      -0.023      -0.011
+C(hour, Treatment(reference=12))[T.14]          0.0029      0.004      0.657      0.511      -0.006       0.012
+C(hour, Treatment(reference=12))[T.15]          0.0256      0.006      4.005      0.000       0.013       0.038
+C(hour, Treatment(reference=12))[T.16]          0.0374      0.010      3.731      0.000       0.018       0.057
+C(hour, Treatment(reference=12))[T.17]          0.1034      0.017      5.967      0.000       0.069       0.137
+C(hour, Treatment(reference=12))[T.18]          0.1148      0.015      7.503      0.000       0.085       0.145
+C(hour, Treatment(reference=12))[T.19]          0.0460      0.014      3.390      0.001       0.019       0.073
+C(hour, Treatment(reference=12))[T.20]      -7.629e-05      0.015     -0.005      0.996      -0.030       0.029
+C(hour, Treatment(reference=12))[T.21]          0.0499      0.017      2.864      0.004       0.016       0.084
+C(hour, Treatment(reference=12))[T.22]          0.1689      0.021      8.005      0.000       0.128       0.210
+C(hour, Treatment(reference=12))[T.23]          0.1853      0.021      8.632      0.000       0.143       0.227
+C(day_of_week, Treatment(reference=0))[T.1]    -0.0410      0.008     -5.222      0.000      -0.056      -0.026
+C(day_of_week, Treatment(reference=0))[T.2]    -0.0440      0.009     -4.820      0.000      -0.062      -0.026
+C(day_of_week, Treatment(reference=0))[T.3]    -0.0261      0.009     -3.036      0.002      -0.043      -0.009
+C(day_of_week, Treatment(reference=0))[T.4]    -0.0314      0.010     -3.268      0.001      -0.050      -0.013
+C(day_of_week, Treatment(reference=0))[T.5]    -0.0532      0.007     -7.902      0.000      -0.066      -0.040
+C(day_of_week, Treatment(reference=0))[T.6]    -0.0574      0.008     -6.913      0.000      -0.074      -0.041
+dropoff_transit_deprivation_score              -0.3027      0.170     -1.785      0.074      -0.635       0.030
+log_distance                                   -0.7009      0.022    -32.141      0.000      -0.744      -0.658
+log_duration                                    0.3017      0.022     13.828      0.000       0.259       0.344
+dropoff_median_income_10k                      -0.0372      0.028     -1.318      0.188      -0.093       0.018
+==============================================================================
+Omnibus:                   346077.858   Durbin-Watson:                   1.608
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           483585.398
+Skew:                           0.764   Prob(JB):                         0.00
+Kurtosis:                       3.913   Cond. No.                         333.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)\n\nMODEL 5 (TOTAL FARE)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               log_fare   R-squared:                       0.644
+Model:                            OLS   Adj. R-squared:                  0.644
+Method:                 Least Squares   F-statistic:                 2.426e+04
+Date:                Tue, 19 May 2026   Prob (F-statistic):          1.59e-140
+Time:                        17:52:18   Log-Likelihood:            -1.2758e+06
+No. Observations:             3660088   AIC:                         2.552e+06
+Df Residuals:                 3660054   BIC:                         2.552e+06
+Df Model:                          33                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.3956      0.278      5.026      0.000       0.851       1.940
+C(hour, Treatment(reference=12))[T.0]           0.2362      0.022     10.791      0.000       0.193       0.279
+C(hour, Treatment(reference=12))[T.1]           0.4102      0.023     17.971      0.000       0.365       0.455
+C(hour, Treatment(reference=12))[T.2]           0.4959      0.031     16.175      0.000       0.436       0.556
+C(hour, Treatment(reference=12))[T.3]           0.1872      0.029      6.489      0.000       0.131       0.244
+C(hour, Treatment(reference=12))[T.4]           0.1620      0.025      6.520      0.000       0.113       0.211
+C(hour, Treatment(reference=12))[T.5]           0.1695      0.029      5.888      0.000       0.113       0.226
+C(hour, Treatment(reference=12))[T.6]           0.1516      0.022      6.947      0.000       0.109       0.194
+C(hour, Treatment(reference=12))[T.7]           0.2103      0.020     10.344      0.000       0.170       0.250
+C(hour, Treatment(reference=12))[T.8]           0.1944      0.021      9.459      0.000       0.154       0.235
+C(hour, Treatment(reference=12))[T.9]           0.0390      0.008      4.897      0.000       0.023       0.055
+C(hour, Treatment(reference=12))[T.10]          0.0065      0.003      2.507      0.012       0.001       0.012
+C(hour, Treatment(reference=12))[T.11]          0.0059      0.004      1.580      0.114      -0.001       0.013
+C(hour, Treatment(reference=12))[T.13]         -0.0153      0.004     -3.520      0.000      -0.024      -0.007
+C(hour, Treatment(reference=12))[T.14]          0.0056      0.006      0.873      0.383      -0.007       0.018
+C(hour, Treatment(reference=12))[T.15]          0.0264      0.009      2.792      0.005       0.008       0.045
+C(hour, Treatment(reference=12))[T.16]          0.0361      0.014      2.576      0.010       0.009       0.064
+C(hour, Treatment(reference=12))[T.17]          0.0989      0.019      5.112      0.000       0.061       0.137
+C(hour, Treatment(reference=12))[T.18]          0.1079      0.009     12.648      0.000       0.091       0.125
+C(hour, Treatment(reference=12))[T.19]          0.0386      0.009      4.202      0.000       0.021       0.057
+C(hour, Treatment(reference=12))[T.20]         -0.0061      0.016     -0.373      0.709      -0.038       0.026
+C(hour, Treatment(reference=12))[T.21]          0.0450      0.020      2.210      0.027       0.005       0.085
+C(hour, Treatment(reference=12))[T.22]          0.1641      0.031      5.356      0.000       0.104       0.224
+C(hour, Treatment(reference=12))[T.23]          0.1784      0.027      6.494      0.000       0.125       0.232
+C(day_of_week, Treatment(reference=0))[T.1]    -0.0409      0.010     -4.234      0.000      -0.060      -0.022
+C(day_of_week, Treatment(reference=0))[T.2]    -0.0427      0.012     -3.686      0.000      -0.065      -0.020
+C(day_of_week, Treatment(reference=0))[T.3]    -0.0238      0.017     -1.435      0.151      -0.056       0.009
+C(day_of_week, Treatment(reference=0))[T.4]    -0.0294      0.010     -2.865      0.004      -0.049      -0.009
+C(day_of_week, Treatment(reference=0))[T.5]    -0.0536      0.009     -5.815      0.000      -0.072      -0.036
+C(day_of_week, Treatment(reference=0))[T.6]    -0.0586      0.011     -5.559      0.000      -0.079      -0.038
+pickup_transit_deprivation_score               -0.1952      0.166     -1.178      0.239      -0.520       0.130
+log_distance                                    0.3120      0.024     12.976      0.000       0.265       0.359
+log_duration                                    0.2955      0.026     11.166      0.000       0.244       0.347
+pickup_median_income_10k                       -0.0148      0.027     -0.541      0.589      -0.069       0.039
+==============================================================================
+Omnibus:                   352291.676   Durbin-Watson:                   1.604
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           494076.113
+Skew:                           0.774   Prob(JB):                         0.00
+Kurtosis:                       3.920   Cond. No.                         331.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)\n\nMODEL 6 (TOTAL COST)\n                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_total   R-squared:                       0.647
+Model:                            OLS   Adj. R-squared:                  0.647
+Method:                 Least Squares   F-statistic:                 1.962e+04
+Date:                Tue, 19 May 2026   Prob (F-statistic):          5.07e-137
+Time:                        17:52:18   Log-Likelihood:            -9.8507e+05
+No. Observations:             3660088   AIC:                         1.970e+06
+Df Residuals:                 3660054   BIC:                         1.971e+06
+Df Model:                          33                                         
+Covariance Type:              cluster                                         
+===============================================================================================================
+                                                  coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------
+Intercept                                       1.9484      0.345      5.648      0.000       1.272       2.625
+C(hour, Treatment(reference=12))[T.0]           0.1322      0.018      7.243      0.000       0.096       0.168
+C(hour, Treatment(reference=12))[T.1]           0.2804      0.018     15.954      0.000       0.246       0.315
+C(hour, Treatment(reference=12))[T.2]           0.3444      0.024     14.532      0.000       0.298       0.391
+C(hour, Treatment(reference=12))[T.3]           0.0773      0.020      3.898      0.000       0.038       0.116
+C(hour, Treatment(reference=12))[T.4]           0.1168      0.025      4.606      0.000       0.067       0.166
+C(hour, Treatment(reference=12))[T.5]           0.1503      0.030      5.047      0.000       0.092       0.209
+C(hour, Treatment(reference=12))[T.6]           0.1420      0.024      6.039      0.000       0.096       0.188
+C(hour, Treatment(reference=12))[T.7]           0.1777      0.021      8.547      0.000       0.137       0.218
+C(hour, Treatment(reference=12))[T.8]           0.1577      0.019      8.428      0.000       0.121       0.194
+C(hour, Treatment(reference=12))[T.9]           0.0288      0.008      3.479      0.001       0.013       0.045
+C(hour, Treatment(reference=12))[T.10]          0.0040      0.005      0.879      0.379      -0.005       0.013
+C(hour, Treatment(reference=12))[T.11]          0.0039      0.005      0.791      0.429      -0.006       0.013
+C(hour, Treatment(reference=12))[T.13]         -0.0139      0.003     -4.170      0.000      -0.020      -0.007
+C(hour, Treatment(reference=12))[T.14]         -0.0003      0.005     -0.060      0.952      -0.010       0.010
+C(hour, Treatment(reference=12))[T.15]          0.0116      0.006      1.849      0.064      -0.001       0.024
+C(hour, Treatment(reference=12))[T.16]          0.0201      0.009      2.346      0.019       0.003       0.037
+C(hour, Treatment(reference=12))[T.17]          0.0632      0.012      5.355      0.000       0.040       0.086
+C(hour, Treatment(reference=12))[T.18]          0.0681      0.005     14.257      0.000       0.059       0.077
+C(hour, Treatment(reference=12))[T.19]          0.0123      0.009      1.376      0.169      -0.005       0.030
+C(hour, Treatment(reference=12))[T.20]         -0.0227      0.015     -1.478      0.139      -0.053       0.007
+C(hour, Treatment(reference=12))[T.21]          0.0115      0.017      0.661      0.508      -0.023       0.046
+C(hour, Treatment(reference=12))[T.22]          0.0657      0.022      3.045      0.002       0.023       0.108
+C(hour, Treatment(reference=12))[T.23]          0.0724      0.019      3.713      0.000       0.034       0.111
+C(day_of_week, Treatment(reference=0))[T.1]    -0.0227      0.007     -3.091      0.002      -0.037      -0.008
+C(day_of_week, Treatment(reference=0))[T.2]    -0.0378      0.010     -3.942      0.000      -0.057      -0.019
+C(day_of_week, Treatment(reference=0))[T.3]    -0.0304      0.013     -2.267      0.023      -0.057      -0.004
+C(day_of_week, Treatment(reference=0))[T.4]    -0.0372      0.010     -3.764      0.000      -0.057      -0.018
+C(day_of_week, Treatment(reference=0))[T.5]    -0.1134      0.016     -6.937      0.000      -0.145      -0.081
+C(day_of_week, Treatment(reference=0))[T.6]    -0.1196      0.010    -12.570      0.000      -0.138      -0.101
+pickup_transit_deprivation_score               -0.2619      0.217     -1.205      0.228      -0.688       0.164
+log_distance                                    0.3071      0.030     10.363      0.000       0.249       0.365
+log_duration                                    0.2456      0.023     10.713      0.000       0.201       0.291
+pickup_median_income_10k                       -0.0204      0.035     -0.575      0.565      -0.090       0.049
+==============================================================================
+Omnibus:                   350415.493   Durbin-Watson:                   1.661
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           491323.004
+Skew:                           0.770   Prob(JB):                         0.00
+Kurtosis:                       3.921   Cond. No.                         331.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)

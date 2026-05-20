@@ -1,0 +1,5 @@
+cluster_id,cluster_label,transit_deprivation_score
+0,Affluent / low deprivation,-0.6122680031600168
+1,Mixed / lower deprivation,0.017440669235403345
+2,Mixed / higher deprivation,0.29281911757349754
+3,High poverty / transit deserts,1.0476315079499494
