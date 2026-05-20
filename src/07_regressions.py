@@ -675,7 +675,7 @@ def main() -> None:
         plt.xticks(rotation=15, ha="right")
         plt.ylabel("Trips per 1,000 Residents")
         plt.xlabel("")
-        plt.title("Trip Volume by Neighborhood Cluster (Pickup)")
+        plt.title("Trip Volume by Neighborhood Cluster (Pickup), January 2024")
         plt.tight_layout()
         plt.savefig(FIG_DIR / "trips_per_1000_by_cluster.png", dpi=200)
         plt.close()

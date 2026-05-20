@@ -53,10 +53,10 @@ def main() -> None:
         plt.figure(figsize=(8, 4))
         sns.histplot(sub["fare_per_mile"], bins=60)
         if trip_type == "rideshare":
-            plt.title("Distribution of Rideshare Fare per Mile, January 2025")
+            plt.title("Distribution of Rideshare Fare per Mile, January 2024")
             plt.xlim(0, 25)
         else:
-            plt.title("Distribution of Taxi Fare per Mile, January 2025")
+            plt.title("Distribution of Taxi Fare per Mile, January 2024")
             plt.xlim(0, 20)
         plt.xlabel("Fare per Mile ($/mile)")
         savefig(f"hist_fare_per_mile_{trip_type}.png")
@@ -65,9 +65,9 @@ def main() -> None:
         plt.figure(figsize=(8, 4))
         sns.histplot(sub["log_fare_per_mile"], bins=60)
         if trip_type == "rideshare":
-            plt.title("Distribution of Log Rideshare Fare per Mile, January 2025")
+            plt.title("Distribution of Log Rideshare Fare per Mile, January 2024")
         else:
-            plt.title("Distribution of Log Taxi Fare per Mile, January 2025")
+            plt.title("Distribution of Log Taxi Fare per Mile, January 2024")
             plt.figtext(
                 0.02,
                 0.01,
@@ -87,9 +87,10 @@ def main() -> None:
     hour_counts = df.groupby(["hour", "trip_type"]).size().reset_index(name="trip_count")
     plt.figure(figsize=(10, 4))
     sns.lineplot(data=hour_counts, x="hour", y="trip_count", hue="trip_type", marker="o")
-    plt.title("Trip Counts by Hour (Jan 2024)")
-    plt.xlabel("hour")
-    plt.ylabel("trip_count")
+    plt.title("Trip Counts by Hour (January 2024)")
+    plt.xlabel("Hour of Day")
+    plt.ylabel("Number of Trips")
+    plt.legend(title="Mode", loc="best")
     savefig("trip_count_by_hour.png")
     plt.close()
 
@@ -119,15 +120,22 @@ def main() -> None:
         x="pickup_ca",
         y="mean_fare_per_mile",
     )
-    plt.title("Top 10 Pickup Community Areas by Mean Rideshare Fare/Mile")
-    plt.xlabel("pickup_ca")
+    plt.title("Top 10 Pickup Community Areas by Mean Rideshare Fare per Mile, January 2024")
+    if ca_lookup is not None:
+        labels = [
+            ca_lookup.get(int(x), str(int(x))) if pd.notna(x) else "" for x in top10.sort_values("mean_fare_per_mile", ascending=False)["pickup_ca"]
+        ]
+        plt.xticks(ticks=range(len(labels)), labels=labels, rotation=35, ha="right")
+        plt.xlabel("Pickup Community Area")
+    else:
+        plt.xlabel("pickup_ca")
     plt.ylabel("Mean Fare per Mile ($/mile)")
     savefig("top10_rideshare_mean_fare_per_mile_by_pickup_ca.png")
     plt.close()
 
     plt.figure(figsize=(10, 4))
     sns.barplot(data=bottom10, x="pickup_ca", y="mean_fare_per_mile")
-    plt.title("Bottom 10 Pickup Community Areas by Mean Rideshare Fare per Mile, January 2025")
+    plt.title("Bottom 10 Pickup Community Areas by Mean Rideshare Fare per Mile, January 2024")
     if ca_lookup is not None:
         labels = [
             ca_lookup.get(int(x), str(int(x))) if pd.notna(x) else "" for x in bottom10["pickup_ca"]
@@ -155,11 +163,11 @@ def main() -> None:
     )
     plt.figure(figsize=(10, 4))
     sns.lineplot(data=hour_means, x="hour", y="mean_fare_per_mile", hue="trip_type", marker="o")
-    plt.title("Mean Fare per Mile by Hour, January 2025")
+    plt.title("Mean Fare per Mile by Hour, January 2024")
     plt.xlabel("Hour of Day")
     plt.ylabel("Mean Fare per Mile ($/mile)")
     plt.legend(
-        title="",
+        title="Mode",
         loc="upper left",
         frameon=True,
         framealpha=0.9,

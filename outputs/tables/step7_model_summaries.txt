@@ -4,7 +4,7 @@ Dep. Variable:      log_fare_per_mile   R-squared:                       0.674
 Model:                            OLS   Adj. R-squared:                  0.674
 Method:                 Least Squares   F-statistic:                 2.206e+04
 Date:                Tue, 19 May 2026   Prob (F-statistic):          5.85e-139
-Time:                        17:52:15   Log-Likelihood:            -1.2758e+06
+Time:                        19:23:44   Log-Likelihood:            -1.2758e+06
 No. Observations:             3660088   AIC:                         2.552e+06
 Df Residuals:                 3660054   BIC:                         2.552e+06
 Df Model:                          33                                         
@@ -60,7 +60,7 @@ Dep. Variable:      log_fare_per_mile   R-squared:                       0.785
 Model:                            OLS   Adj. R-squared:                  0.785
 Method:                 Least Squares   F-statistic:                     2208.
 Date:                Tue, 19 May 2026   Prob (F-statistic):          5.39e-101
-Time:                        17:52:15   Log-Likelihood:                 37654.
+Time:                        19:23:44   Log-Likelihood:                 37654.
 No. Observations:              160927   AIC:                        -7.524e+04
 Df Residuals:                  160893   BIC:                        -7.490e+04
 Df Model:                          33                                         
@@ -116,7 +116,7 @@ Dep. Variable:      log_fare_per_mile   R-squared:                       0.664
 Model:                            OLS   Adj. R-squared:                  0.664
 Method:                 Least Squares   F-statistic:                     2111.
 Date:                Tue, 19 May 2026   Prob (F-statistic):           2.44e-92
-Time:                        17:52:16   Log-Likelihood:            -1.3333e+06
+Time:                        19:23:45   Log-Likelihood:            -1.3333e+06
 No. Observations:             3660088   AIC:                         2.667e+06
 Df Residuals:                 3660073   BIC:                         2.667e+06
 Df Model:                          14                                         
@@ -155,7 +155,7 @@ Dep. Variable:      log_fare_per_mile   R-squared:                       0.673
 Model:                            OLS   Adj. R-squared:                  0.673
 Method:                 Least Squares   F-statistic:                 1.513e+04
 Date:                Tue, 19 May 2026   Prob (F-statistic):          9.75e-133
-Time:                        17:52:17   Log-Likelihood:            -1.2843e+06
+Time:                        19:23:45   Log-Likelihood:            -1.2843e+06
 No. Observations:             3660088   AIC:                         2.569e+06
 Df Residuals:                 3660054   BIC:                         2.569e+06
 Df Model:                          33                                         
@@ -211,7 +211,7 @@ Dep. Variable:               log_fare   R-squared:                       0.644
 Model:                            OLS   Adj. R-squared:                  0.644
 Method:                 Least Squares   F-statistic:                 2.426e+04
 Date:                Tue, 19 May 2026   Prob (F-statistic):          1.59e-140
-Time:                        17:52:18   Log-Likelihood:            -1.2758e+06
+Time:                        19:23:46   Log-Likelihood:            -1.2758e+06
 No. Observations:             3660088   AIC:                         2.552e+06
 Df Residuals:                 3660054   BIC:                         2.552e+06
 Df Model:                          33                                         
@@ -267,7 +267,7 @@ Dep. Variable:              log_total   R-squared:                       0.647
 Model:                            OLS   Adj. R-squared:                  0.647
 Method:                 Least Squares   F-statistic:                 1.962e+04
 Date:                Tue, 19 May 2026   Prob (F-statistic):          5.07e-137
-Time:                        17:52:18   Log-Likelihood:            -9.8507e+05
+Time:                        19:23:46   Log-Likelihood:            -9.8507e+05
 No. Observations:             3660088   AIC:                         1.970e+06
 Df Residuals:                 3660054   BIC:                         1.971e+06
 Df Model:                          33                                         
