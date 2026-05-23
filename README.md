@@ -10,3 +10,43 @@ test whether riders in transit-poor, lower-income, or majority-minority neighbor
 pay disproportionately more per mile than riders in wealthier, transit-rich
 neighborhoods, and compare rideshare pricing patterns to Chicago's regulated taxi
 market as a counterfactual.
+**Research question:**
+Does rideshare pricing in Chicago produce systematic per-mile cost disparities across
+neighborhoods defined by transit access, income, and racial composition — and does
+any such disparity persist relative to regulated taxi pricing, isolating the role of
+the algorithmic pricing mechanism itself?
+**Main findings:**
+1. No statistically significant per-mile price premium in transit-deprived
+   neighborhoods across six regression specifications (β = -0.260, p = 0.126)
+2. A nearly five-fold access gap: affluent neighborhoods generate 2,180 rideshare
+   trips per 1,000 residents vs. 443 in high-poverty transit-desert neighborhoods
+3. Income burden nearly three times higher in transit-desert neighborhoods (3.26%
+   of median household income) vs. affluent neighborhoods (1.20%) for equivalent
+   rideshare use
+4. Estimated 3.88 million annual foregone trips in transit-desert neighborhoods
+## Repository Structure
+chicago-rideshare-equity/ 
+│ ├── data/ │ 
+├── raw/ ← not included (see Data Access below) 
+│ └── processed/ ← not included (see Data Access below) 
+│ ├── src/ 
+│ ├── 01_clean_tnc.py ← clean rideshare trip data 
+│ ├── 02_clean_taxi.py ← clean taxi trip data 
+│ ├── 03_clean_acs.py ← clean ACS demographics 
+│ ├── 04_merge.py ← merge trips with demographics 
+│ ├── 05_eda.py ← exploratory data analysis figures 
+│ ├── 06_cluster_neighborhoods.py ← k-means neighborhood clustering 
+│ ├── 07_regressions.py ← regression models 1-6 
+│ ├── 08_equity_burden.py ← equity burden analysis 
+│ └── download_data.py ← download data from Chicago Data Portal 
+│ ├── notebooks/ 
+│ └── 05_eda_jan2024.ipynb ← exploratory analysis notebook 
+| └── Transportation.ipynb ← Data cleaning for TNP and some exploratory analysis notebook 
+| └── Data_Analysis_Models.ipynb ← Data Analysis of OLS Regression to see residuals + ACS exploratory data visuals
+│ ├── outputs/ 
+│ ├── figures/ ← all figures used in paper and poster 
+│ └── tables/ ← all CSV output tables 
+│ ├── requirements.txt 
+└── README.md
+
+
