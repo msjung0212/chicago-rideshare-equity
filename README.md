@@ -25,6 +25,8 @@ the algorithmic pricing mechanism itself?
    rideshare use
 4. Estimated 3.88 million annual foregone trips in transit-desert neighborhoods
 ## Repository Structure
+```
+.
 chicago-rideshare-equity/ 
 │ ├── data/ │ 
 ├── raw/ ← not included (see Data Access below) 
@@ -48,6 +50,7 @@ chicago-rideshare-equity/
 │ └── tables/ ← all CSV output tables 
 │ ├── requirements.txt 
 └── README.md
+```
 ## Data Access
 Raw data files are not included in this repository due to file size constraints
 ### 1. Chicago TNC (Rideshare) Trips — January 2024
