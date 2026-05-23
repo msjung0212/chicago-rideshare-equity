@@ -48,5 +48,30 @@ chicago-rideshare-equity/
 │ └── tables/ ← all CSV output tables 
 │ ├── requirements.txt 
 └── README.md
+## Data Access
+Raw data files are not included in this repository due to file size constraints
+### 1. Chicago TNC (Rideshare) Trips — January 2024
+**Source:** City of Chicago Data Portal
+**Dataset:** Transportation Network Providers - Trips (2024)
+**Link:** https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips-2023-2024-/n26f-ihde/about_data
+Filter for January 2024
+### 2. Chicago Taxi Trips — January 2024
+**Source:** City of Chicago Data Portal
+**Dataset:** Taxi Trips
+**Link:** 
+### 3. ACS Community Area Demographics
+**Source:** City of Chicago Data Portal
+**Dataset:** Selected Socioeconomic Indicators by Community Area (2023 ACS
+5-year estimates)
+**Link:** https://catalog.data.gov/dataset/acs-5-year-data-by-community-area?
+## Installation
+### Requirements
+- Python 3.9 or higher
+- pip
+**1. Clone the repository:**
+**2. Create and activate a virtual environment:**
+**3. Install dependencies:**
+pip install -r requirements.txt
+
 
 
