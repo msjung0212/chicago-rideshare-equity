@@ -58,7 +58,7 @@ Filter for January 2024
 ### 2. Chicago Taxi Trips — January 2024
 **Source:** City of Chicago Data Portal
 **Dataset:** Taxi Trips
-**Link:** 
+**Link:** https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data
 ### 3. ACS Community Area Demographics
 **Source:** City of Chicago Data Portal
 **Dataset:** Selected Socioeconomic Indicators by Community Area (2023 ACS
