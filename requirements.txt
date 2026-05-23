@@ -3,3 +3,8 @@ numpy
 pyarrow
 statsmodels
 linearmodels
+geojson
+altair 
+json
+statsmodels.api
+statsmodels.formula.api
